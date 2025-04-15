@@ -1,0 +1,17 @@
+.navigation {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_element {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
