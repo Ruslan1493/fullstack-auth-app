@@ -1,16 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../redux/authSlice';
 import style from './Navbar.module.scss';
+import API from '../api/api';
 
 const Navbar = () => {
     const { isLoggedIn, user } = useSelector((state) => state.auth);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    const handleLogout = () => {
+    const handleLogout = async () => {
+        await API.post('/auth/logout');
+
         localStorage.removeItem('token');
         dispatch(logout());
+        navigate('/');
     };
 
     return (
