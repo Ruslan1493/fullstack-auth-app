@@ -5,7 +5,6 @@ import Login from './components/Login';
 import Register from './components/Register';
 import ProtectedPage from './components/ProtectedPage';
 import Homepage from './components/Homepage';
-import PrivateRoute from './components/PrivateRoute';
 
 const App = () => {
     return (
